@@ -1,0 +1,247 @@
+* {
+  margin: 0px;
+  border: border-box;
+}
+
+body {
+  background-color: rgb(183, 180, 180);
+}
+
+/* header{ */
+/* align-items: center; */
+/* text-align: center; */
+/* } */
+.navbar {
+  height: 60px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#a {
+  margin: 10px;
+  box-sizing: 40px;
+  background-size: cover;
+}
+
+.nav-log {
+  height: 50px;
+  width: 100px;
+
+}
+
+.logo {
+  background-image: url("https://play-lh.googleusercontent.com/G7jAks-PRl4d7IkL-s3Ir44nGyPq0Yh872N5UMwZYIJz4wG1Oj0DqoQjsAR5ddKZbQ");
+  background-size: cover;
+  height: 50px;
+  width: 100px;
+}
+
+.border:hover {
+  border: 1.2px solid;
+}
+
+.delever {
+  color: #cccccc;
+  font-size: 0.8rem;
+  margin-left: 15px;
+}
+
+.add {
+  font-size: 1rem;
+  margin-left: 3px;
+}
+
+.add-icon {
+  display: flex;
+  align-items: center;
+  margin: 0.1rem;
+}
+
+.search-icon {
+  color: rgb(255, 255, 255);
+  /* margin: 10px; */
+  height: 45px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background-color: rgb(255, 162, 0);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: rgba(0, 0, 0, 0.801);
+}
+
+.search-select {
+  background-color: #f3f3f3;
+  width: 45px;
+  height: 100%;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.search-input {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(246, 139, 224);
+  border-radius: 5px;
+  margin-left: 5px;
+  /* padding: 5px; */
+  width: 500px;
+  height: 45px;
+}
+
+.nav-search:hover {
+  border: 2px solid orange;
+}
+
+span {
+  font-size: 0.7rem;
+}
+
+.nav-second {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.nav-cart i {
+  font-size: 30px;
+}
+
+.nav-cart {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.nav-bar {
+  background-color: #0c3131;
+  height: 39px;
+  display: flex;
+  padding-left: 3px;
+  color: white;
+  align-items: center;
+}
+
+.a:hover {
+  border: 1px solid;
+}
+
+.a {
+  display: flex;
+  margin-left: 30px;
+}
+
+.image {
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  animation: anim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+@keyframes anim {
+  10% {
+    background-image: url("https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg");
+  }
+
+  20% {
+    background-image: url("https://m.media-amazon.com/images/I/61lwJy4B8PL._SX3000_.jpg");
+  }
+
+  30% {
+    background-image: url("https://m.media-amazon.com/images/I/71U-Q+N7PXL._SX3000_.jpg");
+  }
+
+  40% {
+    background-image: url("https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg");
+  }
+
+  50% {
+    background-image: url("https://m.media-amazon.com/images/I/61zAjw4bqPL._SX3000_.jpg");
+  }
+
+}
+
+.box {
+  
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 25rem;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
+  text-align: center;
+}
+
+.box3 {
+  position: relative;
+  top: 15rem;
+}
+
+.box1 {
+  height: 25rem;
+  width: 100%;
+  background-color: #fff;
+
+  position: relative;
+  margin: 10px;
+  padding: 5px;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: large;
+}
+
+.box2 {
+  height: 10rem;
+  margin-right: 10px;
+}
+
+.box4 {
+  display: flex;
+  height: 14rem;
+  margin-right: 10px;
+  position: relative;
+  top: 11rem;
+  background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_1x._CB418309979_.jpg");
+  background-size: cover;
+}
+
+#e {
+  grid-area: e1;
+}
+
+#b {
+  grid-area: b1;
+}
+
+#c {
+  grid-area: c1;
+}
+
+#d {
+  grid-area: d1;
+}
+
+.pic {
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  display: grid;
+  grid-template-areas: 'e1 b1' 'c1 d1';
+  /* margin-left: 1rem; */
+  
+}
