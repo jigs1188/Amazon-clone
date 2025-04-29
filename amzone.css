@@ -245,177 +245,95 @@ span {
   /* margin-left: 1rem; */
   
 }
-/* For tablets (widths between 481px and 768px) */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    justify-content: center;
+/* Large screens (>1200px) */
+@media screen and (min-width: 1200px) {
+  /* Product grid: 4 columns */
+  .box1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
   }
-
-  .nav-search {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .box {
-    flex-direction: column;
-    position: relative;
-    top: auto;
-  }
-
-  .image {
-    height: 300px;
-  }
-
+  /* Product images: limit height */
   .pic {
-    grid-template-areas: 'e1' 'b1' 'c1' 'd1';
-  }
-
-  .box1 {
-    font-size: medium;
-  }
-}
-/* General Reset for Responsive Elements */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* For large screens (desktops, width > 1200px) */
-@media (min-width: 1200px) {
-  .navbar {
-    justify-content: space-evenly;
-    font-size: 1rem;
-  }
-
-  .nav-search {
-    width: 600px;
-    height: 50px;
-  }
-
-  .image {
-    height: 600px;
-  }
-
-  .box1 {
-    font-size: large;
-    padding: 20px;
-  }
-}
-
-/* For tablets (widths between 768px and 1200px) */
-@media (max-width: 1200px) and (min-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-
-  .nav-search {
-    width: 400px;
-    height: 45px;
-    margin: 10px 0;
-  }
-
-  .image {
-    height: 400px;
-  }
-
-  .box {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .box1 {
-    font-size: medium;
-    padding: 15px;
-  }
-
-  .pic {
-    grid-template-areas: 'e1 b1' 'c1 d1';
-    grid-gap: 15px;
-  }
-}
-
-/* For mobile screens (widths between 480px and 768px) */
-@media (max-width: 768px) and (min-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 10px;
-  }
-
-  .nav-search {
+    height: 240px;
     width: 100%;
-    margin: 10px 0;
+    object-fit: cover;
   }
-
-  .search-input {
-    font-size: 0.9rem;
-  }
-
-  .image {
-    height: 300px;
-  }
-
-  .box {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .box1 {
-    font-size: small;
-    padding: 10px;
-  }
-
-  .pic {
-    grid-template-areas: 'e1' 'b1' 'c1' 'd1';
-    grid-gap: 10px;
+  /* Search bar: moderate width */
+  .search-bar {
+    width: 60%;
+    max-width: 600px;
   }
 }
 
-/* For small mobile screens (widths up to 480px) */
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    font-size: 0.8rem;
-    padding: 5px;
+/* Tablets (768px – 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /* Product grid: 3 columns */
+  .box1 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
-
-  .nav-search {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-
-  .search-input {
-    font-size: 0.8rem;
-  }
-
-  .image {
+  /* Product images: slightly smaller */
+  .pic {
     height: 200px;
   }
+  /* Search bar: wider relative width */
+  .search-bar {
+    width: 70%;
+  }
+}
 
-  .box {
+/* Mobile devices (480px – 767px) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* Navbar: stack items vertically */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Search bar: nearly full width */
+  .search-bar {
+    width: 90%;
+    margin: 10px 0;
+  }
+  /* Product grid: 2 columns */
+  .box1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  /* Product images: moderate size */
+  .pic {
+    height: 180px;
+  }
+}
+
+/* Small mobile screens (<480px) */
+@media screen and (max-width: 479px) {
+  /* Navbar: vertical and centered */
+  nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
-  .box1 {
-    font-size: x-small;
-    padding: 5px;
+  /* Search bar: full width */
+  .search-bar {
+    width: 100%;
+    margin: 10px 0;
   }
-
-  .pic {
+  /* Product grid: single column */
+  .box1 {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 'e1' 'b1' 'c1' 'd1';
-    grid-gap: 5px;
+    gap: 12px;
+  }
+  /* Each product box full-width with bottom margin */
+  .box {
+    margin-bottom: 16px;
+  }
+  /* Product images: responsive width */
+  .pic {
+    width: 100%;
+    height: auto;
   }
 }
