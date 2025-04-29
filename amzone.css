@@ -276,13 +276,116 @@ span {
     font-size: medium;
   }
 }
+/* General Reset for Responsive Elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* For mobile phones (widths up to 480px) */
+/* For large screens (desktops, width > 1200px) */
+@media (min-width: 1200px) {
+  .navbar {
+    justify-content: space-evenly;
+    font-size: 1rem;
+  }
+
+  .nav-search {
+    width: 600px;
+    height: 50px;
+  }
+
+  .image {
+    height: 600px;
+  }
+
+  .box1 {
+    font-size: large;
+    padding: 20px;
+  }
+}
+
+/* For tablets (widths between 768px and 1200px) */
+@media (max-width: 1200px) and (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .nav-search {
+    width: 400px;
+    height: 45px;
+    margin: 10px 0;
+  }
+
+  .image {
+    height: 400px;
+  }
+
+  .box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box1 {
+    font-size: medium;
+    padding: 15px;
+  }
+
+  .pic {
+    grid-template-areas: 'e1 b1' 'c1 d1';
+    grid-gap: 15px;
+  }
+}
+
+/* For mobile screens (widths between 480px and 768px) */
+@media (max-width: 768px) and (min-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-search {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+  }
+
+  .image {
+    height: 300px;
+  }
+
+  .box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .box1 {
+    font-size: small;
+    padding: 10px;
+  }
+
+  .pic {
+    grid-template-areas: 'e1' 'b1' 'c1' 'd1';
+    grid-gap: 10px;
+  }
+}
+
+/* For small mobile screens (widths up to 480px) */
 @media (max-width: 480px) {
   .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
     font-size: 0.8rem;
-    text-align: center;
-    padding: 10px 0;
+    padding: 5px;
   }
 
   .nav-search {
@@ -292,7 +395,7 @@ span {
   }
 
   .search-input {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .image {
@@ -302,16 +405,17 @@ span {
   .box {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .box1 {
-    font-size: small;
-    padding: 10px;
+    font-size: x-small;
+    padding: 5px;
   }
 
   .pic {
     grid-template-columns: 1fr;
-    grid-gap: 10px;
     grid-template-areas: 'e1' 'b1' 'c1' 'd1';
+    grid-gap: 5px;
   }
 }
